@@ -198,6 +198,8 @@ INSERT INTO actors (
 
 -- The SQL statement for the movies output
 -- TODO!
+SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.studio_name
+FROM movies INNER JOIN studios ON movies.studio_id = studios.id;
 
 -- Prints a header for the cast output
 .print ""
@@ -206,8 +208,13 @@ INSERT INTO actors (
 .print ""
 
 
--- The SQL statement for the cast output
+-- The SQL statement for the cast output     
 -- TODO!
+
+SELECT movies.title, actors.actor_name, actors_rols.character_name
+FROM actors_rols INNER JOIN movies ON movies.id = actors_rols.movie_id
+                 INNER JOIN actors ON actors.id = actors_rols.actor_id;
+
 
 -- Drop existing tables
 
