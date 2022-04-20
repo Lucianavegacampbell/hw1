@@ -208,7 +208,7 @@ FROM movies INNER JOIN studios ON movies.studio_id = studios.id;
 .print ""
 
 
--- The SQL statement for the cast output     
+-- The SQL statement for the cast output     sqlite3 kmdb.sqlite3
 -- TODO!
 
 SELECT movies.title, actors.actor_name, actors_rols.character_name
